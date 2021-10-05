@@ -19,3 +19,12 @@ stages:
     - path: stage_02.py
       md5: 81e39f16956bad734c9fb4c719ce0a95
       size: 347
+  stage_03:
+    cmd: python3 stage_03.py
+    deps:
+    - path: artifacts_01.txt
+      md5: 9f0a6aa2d6cdc41414df8a986bb7af09
+      size: 38
+    - path: stage_03.py
+      md5: 459a84ad605e0c6a09cd93d2b3065a18
+      size: 346
