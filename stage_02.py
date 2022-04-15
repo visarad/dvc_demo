@@ -12,3 +12,8 @@ print('===================================')
 print('========END OF STAGE 02============')
 print('===================================')
 
+
+with open('artifacts01.txt','r') as f:
+    text = f.read()
+
+print(text)

@@ -4,27 +4,33 @@ stages:
     cmd: python3 stage_01.py
     deps:
     - path: stage_01.py
-      md5: 2b532de45ce9f3698d944271cb1bf52a
-      size: 379
+      md5: ba5084b68d83e30b7fec32db1a82277a
+      size: 513
     outs:
     - path: artifacts_01.txt
       md5: 9f0a6aa2d6cdc41414df8a986bb7af09
       size: 38
-  stage_02:
-    cmd: python3 stage_02.py
-    deps:
-    - path: artifacts_01.txt
-      md5: 9f0a6aa2d6cdc41414df8a986bb7af09
-      size: 38
-    - path: stage_02.py
-      md5: 81e39f16956bad734c9fb4c719ce0a95
-      size: 347
   stage_03:
     cmd: python3 stage_03.py
     deps:
-    - path: artifacts_01.txt
-      md5: 9f0a6aa2d6cdc41414df8a986bb7af09
-      size: 38
+    - path: artifacts01.txt
+      md5: 3e3fbb5009f208a695ca2eaa2a29eb7a
+      size: 40
+    - path: stage_01.py
+      md5: ba5084b68d83e30b7fec32db1a82277a
+      size: 513
     - path: stage_03.py
-      md5: 459a84ad605e0c6a09cd93d2b3065a18
-      size: 346
+      md5: c9cf720df2cc148a729bbe499aeee8d9
+      size: 432
+  stage_02:
+    cmd: python3 stage_02.py
+    deps:
+    - path: artifacts01.txt
+      md5: 3e3fbb5009f208a695ca2eaa2a29eb7a
+      size: 40
+    - path: stage_01.py
+      md5: ba5084b68d83e30b7fec32db1a82277a
+      size: 513
+    - path: stage_02.py
+      md5: 8e6cf3a2961374b111cc0013d364caac
+      size: 420
